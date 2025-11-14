@@ -41,7 +41,7 @@ const Register = () => {
     try {
       const { data } = await verifyRegistrationOtp({ email: formData.email, otp });
       login(data.user, data.token);
-      navigate('/');
+      navigate('/dashboard');
     } catch (err) {
       setError(err.response?.data?.message || 'Invalid OTP');
     }

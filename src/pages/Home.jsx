@@ -14,7 +14,7 @@ const Home = () => {
         const { data } = await getAllProperties();
         setProperties(data.properties);
       } catch (err) {
-        setError('Failed to fetch properties. Please try again later.');
+        setError('Login/sign up to see the properties');
       } finally {
         setLoading(false);
       }
